@@ -1,77 +1,110 @@
 * {
-    height: 100%;
-    width: 99%;
+  height: 99%;
+  width: 99%;
 }
 
 body {
-  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 254, 254, 0.2)),
-    url(../assets/background_image_pc.png);
+  background-color: gray;
+  /*
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 254, 254, 0.2)),
+     url(../assets/background_image_pc.png); 
+  */
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100px;
-}
-
-
-.titulo {
-    display: flex;
-    justify-content: center;
+  display: flex; /* para conseguir modificar a box (destravar comandos como os dois a baixo) */
+  flex-direction: column; /* estou colocando uma div (box-model a baixo do outro) */
+  align-items: center; /* alinhando os itens na vertical */
+  height: 200px;
 }
 
 h1 {
-    font-family: Arial black;
-    font-size: 55px;
-    color: white;
+  display: flex;
+  justify-content: center; /* alinhando os itens na horizontal */
+  font-family: Arial black;
+  font-size: 55px;
+  color: white;
 }
 
-.fundo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    width: auto;
-    padding: 0px 300px 300px;
+.background {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  width: 80%;
+  height: auto;
+  margin-bottom: 50px;
 }
 
 h2 {
-    margin-left: -535px;
-    margin-top: 10px;
-    font-size:20px;
-    font-family: Georgia;
-    color: #13c8b5;
+  color: #13c8b5;
+  margin: 10px;
+  font-size: 20px;
+  font-family: Georgia;
 }
 
 h3 {
-    font-size: 25px;
-    margin-left: -510px;
-    margin-top: 15px;
-    font-family: Georgia;
+  font-size: 25px;
+  margin: 0px 10px 20px;
+  font-family: Georgia;
 }
 
-.botao {
-    background-color: #13c8b5;
-    color: white;
-    border-radius: 5px;
-    border-color: #13c8b5;
-    border: none;
-    font-family: Georgia;
-    padding: 15px 25px;
-    margin-top: 200px;
+.alternative {
+  text-align: initial; /* conteúdo textutal dentro da div */
+  background-color: #e2f3f1;
+  color: black;
+  border: none;
+  margin: 6px 5px 10px 16px;
+  padding: 15px;
+  width: 95%;
 }
 
-.botao:hover {
-    background-color: #6cf3d5;
+.alternative:hover {
+  /* quando coloco " :hover " significa que estou querendo mudar quando o mouse estiver em cima */
+  background-color: #c1ddda;
+}
+
+.button {
+  background-color: #13c8b5;
+  color: white;
+  margin: 15px 16px 25px;
+  border: none;
+  border-radius: 5px;
+  font-family: Georgia;
+  padding: 15px 5px;
+  width: 150px;
+}
+
+.button:hover {
+  background-color: #11a899;
+}
+
+.imageIcon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
 }
 
 /* responsividade */
 
 @media screen and (max-width: 700px) {
-  body {
-    background-image: url(../assets/background_image_mobile.png);
+  .alternative {
+    margin: 6px 10px 10px 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .alternative {
+    margin: 6px;
+    margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .alternative {
+    margin: 6px 6px 4px;
   }
 }
